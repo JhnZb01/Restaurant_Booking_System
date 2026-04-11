@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
-  const featured = restaurants.filter(r => r.featured);
+
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,28 +93,34 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Featured */}
-      <section className="py-16 container mx-auto px-4">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h2 className="font-display text-3xl font-bold text-foreground">Featured Restaurants</h2>
-            <p className="text-muted-foreground mt-1">Handpicked for an exceptional experience</p>
-          </div>
-          <Link to="/restaurants" className="hidden md:flex items-center gap-1 text-sm font-medium text-primary hover:underline">
-            View All <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featured.map((r, i) => (
-            <RestaurantCard key={r.id} restaurant={r} index={i} />
-          ))}
-        </div>
-        <div className="mt-8 text-center md:hidden">
-          <Link to="/restaurants" className="btn-premium inline-flex items-center gap-2">
-            View All Restaurants <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
+      {/* Cuisine Sections */}
+      {['Italian', 'Japanese', 'French', 'Indian', 'Mexican', 'Mediterranean'].map((cuisineName) => {
+        const cuisineRestaurants = restaurants.filter(r => r.cuisine === cuisineName);
+        if (cuisineRestaurants.length === 0) return null;
+        return (
+          <section key={cuisineName} className="py-12 container mx-auto px-4">
+            <div className="flex items-center justify-between mb-8">
+              <div>
+                <h2 className="font-display text-3xl font-bold text-foreground">{cuisineName} Traditional Cuisine</h2>
+                <p className="text-muted-foreground mt-1">Experience the authentic flavors of {cuisineName} culture</p>
+              </div>
+              <Link to={`/restaurants?search=${cuisineName}`} className="hidden md:flex items-center gap-1 text-sm font-medium text-primary hover:underline">
+                View All <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {cuisineRestaurants.slice(0, 4).map((r, i) => (
+                <RestaurantCard key={r.id} restaurant={r} index={i} />
+              ))}
+            </div>
+            <div className="mt-8 text-center md:hidden">
+              <Link to={`/restaurants?search=${cuisineName}`} className="btn-premium inline-flex items-center gap-2">
+                View All {cuisineName} <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </section>
+        );
+      })}
 
       {/* How it works */}
       <section className="py-16 bg-muted/30">
@@ -126,20 +132,21 @@ const HomePage = () => {
               { icon: Star, title: 'Choose', desc: 'View menus, photos, reviews, and find your perfect spot.' },
               { icon: MapPin, title: 'Reserve', desc: 'Book your table instantly with real-time availability.' },
             ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="glass-card p-8"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
-              </motion.div>
+              <Link to="/restaurants" key={item.title}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15 }}
+                  className="glass-card p-8 h-full hover:border-primary/50 transition-all duration-300 group cursor-pointer"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <item.icon className="h-7 w-7 text-primary group-hover:text-inherit" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>

@@ -7,6 +7,8 @@ import { useApp } from '@/contexts/AppContext';
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/restaurants', label: 'Restaurants' },
+  { to: '/about', label: 'About' },
+  { to: '/contact', label: 'Contact' },
 ];
 
 const Navbar = () => {

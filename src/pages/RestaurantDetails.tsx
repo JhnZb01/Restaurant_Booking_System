@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Star, MapPin, Clock, ArrowLeft, Heart, Users } from 'lucide-react';
@@ -13,6 +13,10 @@ const RestaurantDetails = () => {
   const { user, isAuthenticated, toggleFavorite } = useApp();
   const [bookingOpen, setBookingOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'menu' | 'reviews' | 'info'>('menu');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!restaurant) {
     return (
@@ -29,12 +33,12 @@ const RestaurantDetails = () => {
   const menuCategories = [...new Set(restaurant.menu.map(m => m.category))];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-0">
       {/* Hero */}
-      <div className="relative h-[40vh] md:h-[50vh]">
-        <img src={restaurant.image} alt={restaurant.name} className="w-full h-full object-cover" width={1200} height={800} />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-        <div className="absolute top-20 left-4 md:left-8">
+      <div className="relative w-full overflow-hidden bg-black/5">
+        <img src={restaurant.image} alt={restaurant.name} className="w-full h-auto max-h-[70vh] object-top" width={1200} height={800} />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90" />
+        <div className="absolute top-6 left-4 md:left-8 z-20">
           <Link to="/restaurants" className="glass-card flex items-center gap-2 px-3 py-2 text-sm text-foreground hover:bg-card transition-colors">
             <ArrowLeft className="h-4 w-4" /> Back
           </Link>

@@ -1,12 +1,7 @@
-import restaurant1 from '@/assets/restaurant-1.jpg';
-import restaurant2 from '@/assets/restaurant-2.jpg';
-import restaurant3 from '@/assets/restaurant-3.jpg';
-import restaurant4 from '@/assets/restaurant-4.jpg';
-import restaurant5 from '@/assets/restaurant-5.jpg';
-import restaurant6 from '@/assets/restaurant-6.jpg';
 import type { Restaurant } from '@/types';
 
 export const restaurants: Restaurant[] = [
+  // ITALIAN
   {
     id: '1',
     name: 'La Bella Vita',
@@ -16,8 +11,8 @@ export const restaurants: Restaurant[] = [
     priceRange: '$$$',
     location: 'Downtown',
     address: '123 Main Street, Downtown',
-    image: restaurant1,
-    gallery: [restaurant1],
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80',
+    gallery: ['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'],
     description: 'Authentic Italian cuisine in a cozy brick-walled setting. Our chef brings generations of family recipes from Tuscany to your table.',
     featured: true,
     tags: ['Romantic', 'Wine Bar', 'Pasta'],
@@ -38,6 +33,59 @@ export const restaurants: Restaurant[] = [
     ],
   },
   {
+    id: '7',
+    name: 'Trattoria Romano',
+    cuisine: 'Italian',
+    rating: 4.6,
+    reviewCount: 210,
+    priceRange: '$$',
+    location: 'East Side',
+    address: '900 Roman Rd, East Side',
+    image: 'https://venetosecrets.com/wp-content/uploads/2025/03/Da-Romano-Burano-Veneto-Secrets489-1.jpg',
+    gallery: ['https://images.unsplash.com/photo-1550547660-d34555e41517?auto=format&fit=crop&w=800&q=80'],
+    description: 'A family-owned trattoria serving traditional Roman dishes like Carbonara and Cacio e Pepe in a vibrant atmosphere.',
+    featured: false,
+    tags: ['Classic', 'Family Friendly', 'Pasta'],
+    openingHours: [
+      { day: 'Tue-Sun', hours: '12:00 PM - 10:30 PM' },
+    ],
+    menu: [
+      { id: 'm30', name: 'Spaghetti Carbonara', description: 'Classic Roman pasta with guanciale and egg', price: 22, category: 'Mains' },
+      { id: 'm31', name: 'Margherita Pizza', description: 'Wood-fired crust with San Marzano tomatoes and mozzarella', price: 18, category: 'Mains' },
+      { id: 'm32', name: 'Cannoli', description: 'Ricotta filled pastry with chocolate chips', price: 9, category: 'Desserts' },
+    ],
+    reviews: [
+      { id: 'r10', userName: 'Mike T.', rating: 5, comment: 'Amazing vibes and delicious Roman pasta.', date: '2024-02-28', avatar: 'MT' },
+    ],
+  },
+  {
+    id: '8',
+    name: 'Napoli Pizzeria',
+    cuisine: 'Italian',
+    rating: 4.7,
+    reviewCount: 450,
+    priceRange: '$$',
+    location: 'Midtown',
+    address: '400 Pizza Blvd, Midtown',
+    image: 'https://img.ctykit.com/cdn/co-boulder/images/tr:w-1800/sforno-2022.jpg',
+    gallery: ['https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80'],
+    description: 'Award-winning Neapolitan pizza baked in our custom wood-fired oven imported directly from Italy.',
+    featured: true,
+    tags: ['Pizza', 'Casual', 'Authentic'],
+    openingHours: [
+      { day: 'Mon-Sun', hours: '11:00 AM - 11:00 PM' },
+    ],
+    menu: [
+      { id: 'm33', name: 'Diavola Pizza', description: 'Spicy salami, chili flakes, fresh mozzarella', price: 20, category: 'Mains' },
+      { id: 'm34', name: 'Garlic Knots', description: 'Freshly baked dough tied in knots with garlic butter', price: 8, category: 'Starters' },
+    ],
+    reviews: [
+      { id: 'r11', userName: 'Elena V.', rating: 5, comment: 'Best pizza this side of the Atlantic!', date: '2024-01-15', avatar: 'EV' },
+    ],
+  },
+
+  // JAPANESE
+  {
     id: '2',
     name: 'Sakura Zen',
     cuisine: 'Japanese',
@@ -46,8 +94,8 @@ export const restaurants: Restaurant[] = [
     priceRange: '$$$$',
     location: 'Midtown',
     address: '456 Oak Avenue, Midtown',
-    image: restaurant2,
-    gallery: [restaurant2],
+    image: 'https://media-cdn.tripadvisor.com/media/photo-s/2b/cd/e5/54/caption.jpg',
+    gallery: ['https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=800&q=80'],
     description: 'A minimalist zen dining experience featuring the freshest sushi and omakase menus curated by Master Chef Tanaka.',
     featured: true,
     tags: ['Omakase', 'Sushi Bar', 'Premium'],
@@ -68,6 +116,58 @@ export const restaurants: Restaurant[] = [
     ],
   },
   {
+    id: '9',
+    name: 'Tokyo Sushi House',
+    cuisine: 'Japanese',
+    rating: 4.5,
+    reviewCount: 300,
+    priceRange: '$$',
+    location: 'Downtown',
+    address: '101 Sushi Way, Downtown',
+    image: 'https://vietnamnightlife.com/uploads/images/2024/02/1708493452-single_product2-tokyosushihousecover.jpg',
+    gallery: ['https://images.unsplash.com/photo-1611143669185-3773fb22c366?auto=format&fit=crop&w=800&q=80'],
+    description: 'Casual sushi house offering a wide variety of rolls, teriyaki, and traditional Japanese appetizers.',
+    featured: false,
+    tags: ['Sushi', 'Casual', 'Bento'],
+    openingHours: [
+      { day: 'Mon-Sun', hours: '11:00 AM - 10:00 PM' },
+    ],
+    menu: [
+      { id: 'm35', name: 'Spicy Tuna Roll', description: 'Fresh tuna, spicy mayo, cucumber', price: 12, category: 'Rolls' },
+      { id: 'm36', name: 'Chicken Teriyaki Bento', description: 'Served with rice, salad, and dumplings', price: 18, category: 'Mains' },
+    ],
+    reviews: [
+      { id: 'r12', userName: 'Ken J.', rating: 4, comment: 'Great value for money, fresh ingredients.', date: '2024-03-22', avatar: 'KJ' },
+    ],
+  },
+  {
+    id: '10',
+    name: 'Ramen Ichiraku',
+    cuisine: 'Japanese',
+    rating: 4.8,
+    reviewCount: 650,
+    priceRange: '$$',
+    location: 'West End',
+    address: '500 Noodle St, West End',
+    image: 'https://static.rundschau-online.de/__images/2025/09/22/d59fcd5f-b51b-4164-a7c7-50baeabde53f.jpeg?q=75&q=70&rect=0,414,4000,2250&w=2000&h=1334&fm=jpeg&s=eadfebdd5229daba947287429ee5438b',
+    gallery: ['https://images.unsplash.com/photo-1569718212165-3a127ee0f1aa?auto=format&fit=crop&w=800&q=80'],
+    description: 'Specializing in Tonkotsu broth simmered for 24 hours. The perfect bowl of comfort on a cold day.',
+    featured: true,
+    tags: ['Ramen', 'Izakaya', 'Comfort Food'],
+    openingHours: [
+      { day: 'Wed-Sun', hours: '12:00 PM - 11:00 PM' },
+    ],
+    menu: [
+      { id: 'm37', name: 'Tonkotsu Ramen', description: 'Rich pork broth with chashu, egg, and bamboo shoots', price: 16, category: 'Mains' },
+      { id: 'm38', name: 'Gyoza', description: 'Pan-fried pork and cabbage dumplings', price: 8, category: 'Starters' },
+    ],
+    reviews: [
+      { id: 'r13', userName: 'Naruto U.', rating: 5, comment: 'The best ramen in the universe! Believe it!', date: '2024-02-14', avatar: 'NU' },
+    ],
+  },
+
+  // FRENCH
+  {
     id: '3',
     name: 'Le Petit Bistro',
     cuisine: 'French',
@@ -76,8 +176,8 @@ export const restaurants: Restaurant[] = [
     priceRange: '$$$',
     location: 'West End',
     address: '789 Elm Boulevard, West End',
-    image: restaurant3,
-    gallery: [restaurant3],
+    image: 'https://images.unsplash.com/photo-1502301103665-0b95cc738daf?auto=format&fit=crop&w=800&q=80',
+    gallery: ['https://images.unsplash.com/photo-1502301103665-0b95cc738daf?auto=format&fit=crop&w=800&q=80'],
     description: 'Parisian charm meets modern elegance. Enjoy classic French cuisine with a contemporary twist in our beautiful marble-accented dining room.',
     featured: true,
     tags: ['Brunch', 'Wine Pairing', 'Elegant'],
@@ -96,6 +196,58 @@ export const restaurants: Restaurant[] = [
     ],
   },
   {
+    id: '11',
+    name: 'Chez Pierre',
+    cuisine: 'French',
+    rating: 4.6,
+    reviewCount: 150,
+    priceRange: '$$$$',
+    location: 'Downtown',
+    address: '88 Paris Lane, Downtown',
+    image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80',
+    gallery: ['https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80'],
+    description: 'Haute cuisine in an upscale setting. We celebrate traditional French culinary techniques and premium ingredients.',
+    featured: false,
+    tags: ['Fine Dining', 'Date Night', 'Steakhouse'],
+    openingHours: [
+      { day: 'Tue-Sat', hours: '6:00 PM - 11:00 PM' },
+    ],
+    menu: [
+      { id: 'm39', name: 'Steak Frites', description: 'Prime ribeye with an abundance of perfectly crispy fries and herb butter', price: 45, category: 'Mains' },
+      { id: 'm40', name: 'Escargots', description: 'Garlic butter and parsley snails in shell', price: 18, category: 'Starters' },
+    ],
+    reviews: [
+      { id: 'r14', userName: 'John D.', rating: 5, comment: 'Exceptional service and unforgettable food.', date: '2024-04-01', avatar: 'JD' },
+    ],
+  },
+  {
+    id: '12',
+    name: 'Maison des Crêpes',
+    cuisine: 'French',
+    rating: 4.8,
+    reviewCount: 420,
+    priceRange: '$',
+    location: 'Midtown',
+    address: '222 Crepe Corner, Midtown',
+    image: 'https://www.clubulcopiilor.ro/wp-content/uploads/2024/03/Maison-des-crepes-1024x1024.webp',
+    gallery: ['https://images.unsplash.com/photo-1504670005740-4f515c0a3731?auto=format&fit=crop&w=800&q=80'],
+    description: 'Sweet and savory authentic Breton crêpes and galettes made right before your eyes.',
+    featured: false,
+    tags: ['Cafe', 'Breakfast', 'Dessert'],
+    openingHours: [
+      { day: 'Mon-Sun', hours: '8:00 AM - 8:00 PM' },
+    ],
+    menu: [
+      { id: 'm41', name: 'Galette Complète', description: 'Buckwheat crêpe with ham, gruyère cheese, and a sunny-side-up egg', price: 15, category: 'Mains' },
+      { id: 'm42', name: 'Nutella Crêpe', description: 'Sweet crêpe with Nutella and strawberries', price: 10, category: 'Desserts' },
+    ],
+    reviews: [
+      { id: 'r15', userName: 'Sophie L.', rating: 5, comment: 'Reminds me of my childhood in France.', date: '2024-03-25', avatar: 'SL' },
+    ],
+  },
+
+  // INDIAN
+  {
     id: '4',
     name: 'Spice Palace',
     cuisine: 'Indian',
@@ -104,8 +256,8 @@ export const restaurants: Restaurant[] = [
     priceRange: '$$',
     location: 'East Side',
     address: '321 Spice Lane, East Side',
-    image: restaurant4,
-    gallery: [restaurant4],
+    image: 'https://img.restaurantguru.com/r518-Spice-Palace-Indian-Restaurant-meals-2021-09.jpg',
+    gallery: ['https://images.unsplash.com/photo-1585937421606-24afebc9ca1d?auto=format&fit=crop&w=800&q=80'],
     description: 'A regal Indian dining experience with authentic recipes from across the subcontinent. Our tandoor oven produces the most succulent dishes.',
     featured: false,
     tags: ['Tandoori', 'Vegetarian Friendly', 'Buffet'],
@@ -122,6 +274,58 @@ export const restaurants: Restaurant[] = [
     ],
   },
   {
+    id: '13',
+    name: 'Taj Mahal Dine',
+    cuisine: 'Indian',
+    rating: 4.8,
+    reviewCount: 340,
+    priceRange: '$$$',
+    location: 'Harbor View',
+    address: '100 King St, Harbor View',
+    image: 'https://i.pinimg.com/originals/4c/89/de/4c89de4f75436482188b1a23d8dd34a7.jpg',
+    gallery: ['https://tse1.mm.bing.net/th/id/OIP.GFOhZGJGldpSEWtWhWOPVwHaE7?pid=Api&P=0&h=220'],
+    description: 'Fine dining Indian cuisine featuring royal recipes of the Mughal era and modern fusion twists.',
+    featured: true,
+    tags: ['Fine Dining', 'Mughlai', 'Views'],
+    openingHours: [
+      { day: 'Mon-Sun', hours: '5:00 PM - 11:00 PM' },
+    ],
+    menu: [
+      { id: 'm43', name: 'Dal Makhani', description: 'Overnight simmered black lentils finished with cream', price: 16, category: 'Mains' },
+      { id: 'm44', name: 'Tandoori Prawns', description: 'Jumbo prawns marinated in yogurt and spices', price: 28, category: 'Starters' },
+    ],
+    reviews: [
+      { id: 'r16', userName: 'Anita K.', rating: 5, comment: 'The ambiance is breathtaking and the food is out of this world.', date: '2024-02-10', avatar: 'AK' },
+    ],
+  },
+  {
+    id: '14',
+    name: 'Curry Leaf',
+    cuisine: 'Indian',
+    rating: 4.5,
+    reviewCount: 220,
+    priceRange: '$',
+    location: 'South Beach',
+    address: '45 Sunset Blvd, South Beach',
+    image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/65/93/1d/restaurant-front-at-night.jpg?w=1200&h=-1&s=1',
+    gallery: ['https://tse4.mm.bing.net/th/id/OIP.6jLuT_UgPZNiTffgoQ8pIAHaE7?pid=Api&P=0&h=220'],
+    description: 'South Indian coastal flavors offering incredible dosas, thalis, and spicy seafood curries in a casual setting.',
+    featured: false,
+    tags: ['South Indian', 'Casual', 'Spicy'],
+    openingHours: [
+      { day: 'Tue-Sun', hours: '10:00 AM - 10:00 PM' },
+    ],
+    menu: [
+      { id: 'm45', name: 'Masala Dosa', description: 'Crispy rice crepe filled with spiced potatoes', price: 12, category: 'Mains' },
+      { id: 'm46', name: 'Fish Curry', description: 'Tangy tamarind based coastal fish curry', price: 18, category: 'Mains' },
+    ],
+    reviews: [
+      { id: 'r17', userName: 'Vikram S.', rating: 4, comment: 'Authentic taste of Kerala. The dosas are massive.', date: '2024-03-30', avatar: 'VS' },
+    ],
+  },
+
+  // MEXICAN
+  {
     id: '5',
     name: 'Casa del Sol',
     cuisine: 'Mexican',
@@ -130,8 +334,8 @@ export const restaurants: Restaurant[] = [
     priceRange: '$$',
     location: 'South Beach',
     address: '555 Sunset Drive, South Beach',
-    image: restaurant5,
-    gallery: [restaurant5],
+    image: 'https://www.ocregister.com/wp-content/uploads/2021/10/OCR-L-SOL-1021.jpg?w=525',
+    gallery: ['https://images.unsplash.com/photo-1565299524944-86dc24744955?auto=format&fit=crop&w=800&q=80'],
     description: 'Vibrant Mexican flavors in a lively atmosphere. From street-style tacos to gourmet moles, every dish is a celebration.',
     featured: false,
     tags: ['Tacos', 'Margaritas', 'Lively'],
@@ -149,6 +353,58 @@ export const restaurants: Restaurant[] = [
     ],
   },
   {
+    id: '15',
+    name: 'El Camino',
+    cuisine: 'Mexican',
+    rating: 4.8,
+    reviewCount: 500,
+    priceRange: '$$$',
+    location: 'Downtown',
+    address: '300 Liberty St, Downtown',
+    image: 'https://elcaminocantina.com.au/wp-content/uploads/2023/02/El-Camino-Surfers-Paradise-Opt1.jpg',
+    gallery: ['https://images.unsplash.com/photo-1584061266205-1a221f2bbd37?auto=format&fit=crop&w=800&q=80'],
+    description: 'A modern take on traditional Mexican cuisine celebrating regional flavors and a premium tequila bar.',
+    featured: true,
+    tags: ['Modern', 'Cocktails', 'Upscale'],
+    openingHours: [
+      { day: 'Tue-Sun', hours: '4:00 PM - 11:30 PM' },
+    ],
+    menu: [
+      { id: 'm47', name: 'Oaxaca Mole', description: 'Slow-simmered rich chocolate chili sauce over chicken', price: 26, category: 'Mains' },
+      { id: 'm48', name: 'Ceviche Verde', description: 'Fresh fish cured in lime and tomatillo salsa', price: 16, category: 'Starters' },
+    ],
+    reviews: [
+      { id: 'r18', userName: 'Samantha W.', rating: 5, comment: 'Incredible mole and the best tequila selection.', date: '2024-01-20', avatar: 'SW' },
+    ],
+  },
+  {
+    id: '16',
+    name: 'La Fiesta Cantina',
+    cuisine: 'Mexican',
+    rating: 4.6,
+    reviewCount: 800,
+    priceRange: '$',
+    location: 'East Side',
+    address: '50 Fiesta Rd, East Side',
+    image: 'https://res.cloudinary.com/spothopper/image/fetch/f_auto,q_70,c_fit,h_864/http://static.spotapps.co/spots/c9/9ab804b0cf48fb9d858e7aa58a3a82/:original',
+    gallery: ['https://images.unsplash.com/photo-1564834724213-91c6bfcd561f?auto=format&fit=crop&w=800&q=80'],
+    description: 'Casual, vibrant, and fun! We serve giant burritos, bottomless chips, and sizzling fajitas fit for a fiesta.',
+    featured: false,
+    tags: ['Tex-Mex', 'Party', 'Burritos'],
+    openingHours: [
+      { day: 'Mon-Sun', hours: '11:00 AM - 1:00 AM' },
+    ],
+    menu: [
+      { id: 'm49', name: 'Sizzling Steak Fajitas', description: 'Served with tortillas, guac, and sour cream', price: 22, category: 'Mains' },
+      { id: 'm50', name: 'Mucha Lucha Burrito', description: 'Stuffed with beans, rice, and your choice of meat', price: 14, category: 'Mains' },
+    ],
+    reviews: [
+      { id: 'r19', userName: 'Tyler M.', rating: 5, comment: 'Huge portions and amazing late-night vibe.', date: '2024-03-05', avatar: 'TM' },
+    ],
+  },
+
+  // MEDITERRANEAN
+  {
     id: '6',
     name: 'Aegean Terrace',
     cuisine: 'Mediterranean',
@@ -157,8 +413,8 @@ export const restaurants: Restaurant[] = [
     priceRange: '$$$',
     location: 'Harbor View',
     address: '888 Ocean Blvd, Harbor View',
-    image: restaurant6,
-    gallery: [restaurant6],
+    image: 'https://thumbs.dreamstime.com/b/experience-magic-santorini-stunning-restaurant-terrace-aegean-sea-views-cyclades-greece-indulge-culinary-372019778.jpg',
+    gallery: ['https://thumbs.dreamstime.com/b/experience-magic-santorini-stunning-restaurant-terrace-aegean-sea-views-cyclades-greece-indulge-culinary-372019778.jpg'],
     description: 'Breathtaking ocean views paired with fresh Mediterranean seafood. Our rooftop terrace is the perfect setting for sunset dining.',
     featured: true,
     tags: ['Seafood', 'Rooftop', 'Sunset Views'],
@@ -172,6 +428,56 @@ export const restaurants: Restaurant[] = [
     ],
     reviews: [
       { id: 'r8', userName: 'Anna S.', rating: 5, comment: 'The sunset views combined with amazing seafood — unforgettable!', date: '2024-03-13', avatar: 'AS' },
+    ],
+  },
+  {
+    id: '17',
+    name: 'The Olive Tree',
+    cuisine: 'Mediterranean',
+    rating: 4.7,
+    reviewCount: 190,
+    priceRange: '$$',
+    location: 'West End',
+    address: '150 Olive Grove, West End',
+    image: 'https://media-cdn.tripadvisor.com/media/photo-s/13/1c/6e/30/the-olive-tree-restaurant.jpg',
+    gallery: ['https://images.unsplash.com/photo-1529312266112-b33cfcd2da9e?auto=format&fit=crop&w=800&q=80'],
+    description: 'A cozy spot honoring the traditions of Lebanon and Greece, offering amazing meze platters and charcoal-grilled kebabs.',
+    featured: false,
+    tags: ['Meze', 'Grill', 'Hummus'],
+    openingHours: [
+      { day: 'Tue-Sun', hours: '11:30 AM - 10:00 PM' },
+    ],
+    menu: [
+      { id: 'm51', name: 'Mixed Grill Kebab', description: 'Lamb, chicken, and beef served with rice pilaf', price: 24, category: 'Mains' },
+      { id: 'm52', name: 'Meze Platter', description: 'Hummus, baba ganoush, tzatziki, and warm pita', price: 18, category: 'Starters' },
+    ],
+    reviews: [
+      { id: 'r20', userName: 'Chloe H.', rating: 5, comment: 'The best hummus I have ever tasted outside of Beirut.', date: '2024-02-25', avatar: 'CH' },
+    ],
+  },
+  {
+    id: '18',
+    name: 'Santorini Flavors',
+    cuisine: 'Mediterranean',
+    rating: 4.6,
+    reviewCount: 320,
+    priceRange: '$',
+    location: 'Midtown',
+    address: '12 White Church Path, Midtown',
+    image: 'https://mias.restaurant/wp-content/uploads/2023/08/mias-restaurant.jpg',
+    gallery: ['https://images.unsplash.com/photo-1555507036-7c961e69b5ff?auto=format&fit=crop&w=800&q=80'],
+    description: 'Authentic Greek tavern bringing the vibes of Santorini right to the city. Enjoy our famous gyros and fresh salads.',
+    featured: false,
+    tags: ['Greek', 'Gyros', 'Taverna'],
+    openingHours: [
+      { day: 'Mon-Sun', hours: '11:00 AM - 9:00 PM' },
+    ],
+    menu: [
+      { id: 'm53', name: 'Pork Gyro Wrap', description: 'Pita wrapped with pork, tzatziki, tomatoes, and fries', price: 12, category: 'Mains' },
+      { id: 'm54', name: 'Classic Greek Salad', description: 'Tomatoes, cucumbers, red onion, olives, and a block of feta', price: 14, category: 'Starters' },
+    ],
+    reviews: [
+      { id: 'r21', userName: 'George P.', rating: 4, comment: 'Feels just like a tavern back home. Opa!', date: '2024-03-28', avatar: 'GP' },
     ],
   },
 ];
