@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![React](https://img.shields.io/badge/React-18-blue.svg)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3-cyan.svg)
 
 **Dine Delight** is a modern, high-performance restaurant discovery and table reservation platform. Designed with a focus on user experience and aesthetic excellence, it allows users to find the perfect dining spot, explore menus, read verified reviews, and book tables seamlessly.
@@ -25,7 +25,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Core**: [React 18](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+- **Core**: [React 18](https://reactjs.org/) with [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [Shadcn/UI](https://ui.shadcn.com/) (Radix UI)
@@ -83,8 +83,7 @@ src/
 ├── hooks/          # Custom React hooks
 ├── lib/            # Utility functions and configurations
 ├── pages/          # Page-level components (Index, Dashboard, Details)
-├── types/          # TypeScript interfaces and types
-└── App.tsx         # Main application entry and routing
+└── App.jsx         # Main application entry and routing
 ```
 
 ---
