@@ -7,17 +7,17 @@ const AboutPage = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
           <UtensilsCrossed className="h-12 w-12 text-primary mx-auto mb-4" />
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">About TableCraft</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">About Dine Delight</h1>
           <p className="text-lg text-muted-foreground">Elevating your dining experiences across the city.</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="glass-card p-8 md:p-12 mb-12">
           <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Story</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            Founded with a passion for exceptional culinary experiences, TableCraft was born from a simple idea: making it effortless to discover and reserve tables at the finest restaurants. We believe that a great meal is more than just food; it's about the ambiance, the service, and the memories created around the table.
+            Founded with a passion for exceptional culinary experiences, Dine Delight was born from a simple idea: making it effortless to discover and reserve tables at the finest restaurants. We believe that a great meal is more than just food; it's about the ambiance, the service, and the memories created around the table.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Today, we partner with top-rated restaurants, hidden gems, and iconic eateries to provide our users with unparalleled access to the best dining the city has to offer. Whether it's a romantic dinner, a business lunch, or a family gathering, TableCraft is your trusted companion.
+            Today, we partner with top-rated restaurants, hidden gems, and iconic eateries to provide our users with unparalleled access to the best dining the city has to offer. Whether it's a romantic dinner, a business lunch, or a family gathering, Dine Delight is your trusted companion.
           </p>
         </motion.div>
 

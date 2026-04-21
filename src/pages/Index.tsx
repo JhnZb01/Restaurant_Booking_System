@@ -155,7 +155,7 @@ const HomePage = () => {
       {/* Footer */}
       <footer className="py-12 border-t border-border">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2024 TableCraft. All rights reserved.</p>
+          <p>© 2024 Dine Delight. All rights reserved.</p>
         </div>
       </footer>
     </div>

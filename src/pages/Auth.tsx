@@ -43,7 +43,7 @@ const AuthPage = () => {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2 mb-4">
             <UtensilsCrossed className="h-8 w-8 text-primary" />
-            <span className="font-display text-2xl font-bold text-foreground">TableCraft</span>
+            <span className="font-display text-2xl font-bold text-foreground">Dine Delight</span>
           </Link>
           <h1 className="font-display text-2xl font-bold text-foreground">
             {mode === 'login' ? 'Welcome Back' : 'Create Account'}

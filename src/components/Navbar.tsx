@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2">
           <UtensilsCrossed className="h-6 w-6 text-primary" />
-          <span className="font-display text-xl font-bold text-foreground">TableCraft</span>
+          <span className="font-display text-xl font-bold text-foreground">Dine Delight</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
