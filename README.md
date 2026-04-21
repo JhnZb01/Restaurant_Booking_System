@@ -90,7 +90,7 @@ src/
 
 ## 📸 Screenshots
 
-*(Add your screenshots here after hosting or taking them)*
+![Dine Delight Homepage](public/screenshot.png)
 
 ---
 
